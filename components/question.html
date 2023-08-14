@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- v1.0 -->
+    <!-- <div class="container d-flex justify-content-center align-items-center">
+        <div class="row h-100 question rounded-3">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12 mt-4 mb-3">
+                        <h3 class="display-6 text-uppercase text-light fw-medium">Alguma Questão?</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <h3 class="display-6 text-uppercase text-light fw-medium">Fale Connosco!</h3>
+                    </div>
+                    <div class="col-md-12 ps-0 mt-3 mb-0">
+                        <img src="images/linguica.jpg" class="img-fluid" alt="Imagem Responsiva">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 d-flex flex-column justify-content-center">
+                <form action="#" method="post">
+                    <div class="mb-3">
+                        <input type="text" class="form-control rounded-5 pt-3 pb-3" id="question-name"
+                            placeholder="Nome">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control rounded-5 pt-3 pb-3" id="question-email"
+                            placeholder="Email">
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control rounded-5 pt-3 pb-3" id="question-contact"
+                            placeholder="Contacto">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control rounded-4" id="question-message" rows="10"
+                            placeholder="Mensagem"></textarea>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-end">
+                        <button type="submit" class="btn-subscrever text-uppercase">Subscrever</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- v2.0 -->
+    <!-- <section class="container-fluid d-flex justify-content-center align-items-center px-5 pt-5 mt-5">
+        <div class="row h-100 question rounded-4 p-sm-0 py-lg-5">
+            <div class="col-md-6">
+                <div class="row h-100">
+                    <div class="col-md-12 mt-5 mb-0 mb-lg-3 ps-5">
+                        <h3 class="display-6 text-uppercase text-light fw-medium">Alguma Questão?</h3>
+                    </div>
+                    <div class="col-md-12 mt-0 mb-lg-4 ps-5">
+                        <h3 class="display-6 text-uppercase text-light fw-medium">Fale Connosco!</h3>
+                    </div>
+                    <div class="col-md-12 ps-0 mt-3 mb-0 d-flex align-items-end">
+                        <img src="images/linguica.jpg" class="img-fluid" alt="Imagem Responsiva">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 px-5 d-flex flex-column justify-content-center">
+                <form action="#" method="post">
+                    <div class="mb-3">
+                        <input type="text" class="form-control rounded-5 pt-3 pb-3" id="question-name"
+                            placeholder="Nome">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control rounded-5 pt-3 pb-3" id="question-email"
+                            placeholder="Email">
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control rounded-5 pt-3 pb-3" id="question-contact"
+                            placeholder="Contacto">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control rounded-4" id="question-message" rows="10"
+                            placeholder="Mensagem"></textarea>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-end">
+                        <button type="submit" class="btn-subscrever text-uppercase">Subscrever</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- v3.0 (BEST) -->
+    <div class="container">
+        <div class="row  h-100 question rounded-4">
+            <!--  LEFT SIDE   -->
+            <div class="col-md-6">
+                <div class="row h-100">
+                    <h3 class="display-5 text-uppercase text-light fw-medium pt-5 ps-5">Alguma Questão?</h3>
+                    <h3 class="display-5 text-uppercase text-light fw-medium ps-5">Fale Connosco!</h3>
+
+                    <div class="col-md-12 ps-0 mt-3 mb-0 d-flex align-items-end">
+                        <img src="images/linguica.jpg" class="img-fluid rounded-bottom-4 rounded-md"
+                            alt="Imagem Responsiva">
+                    </div>
+                </div>
+            </div>
+
+            <!--  FORM   -->
+            <div class="col-md-6 d-flex flex-column justify-content-center p-5">
+                <!--   VERIFICAR ESSE D-FLEX COM O GAP SE NÃO VAI FERRAR O MOBILE     -->
+                <form action="" class="d-flex flex-column gap-2 gap-lg-3">
+                    <input type="name" class="form-control rounded-pill py-3" placeholder="NOME">
+                    <input type="email" class="form-control rounded-pill py-3" placeholder="EMAIL">
+                    <input type="tel" class="form-control rounded-pill py-3" placeholder="CONTACTO">
+                    <textarea aria-label="message" name="message" rows="10" class="rounded-2"></textarea>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit"
+                            class="btn btn-success rounded-pill py-2 px-5 text-uppercase">Subscrever</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

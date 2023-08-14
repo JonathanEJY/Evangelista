@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- v1.0 -->
+    <!-- <div class="container-fluid d-flex justify-content-center align-items-center px-5">
+        <div class="row newsletter rounded-5">
+            <div class="row h-100">
+                <div class="col-md-6">
+                    <div class="d-flex flex-column ">
+                        <a href="#" class="link-light fs-4 fw-medium text-uppercase letter-spacing">Home</a>
+                        <a href="#" class="link-light fs-4 fw-medium text-uppercase letter-spacing">Sobre
+                            nós</a>
+                        <a href="#" class="link-light fs-4 fw-medium text-uppercase letter-spacing">Reservar</a>
+                        <a href="#" class="link-light fs-4 fw-medium text-uppercase letter-spacing">Contactos</a>
+                        <div class="d-flex align-items-center gap-5">
+                            <a href="#" aria-label="Facebook">
+                                <i class="bi bi-facebook link-light fs-1"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <i class="bi bi-instagram link-light fs-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex flex-column align-items-end">
+                    <h3 class="text-light text-end display-5 fw-medium">Receba a nossa Newsletter</h3>
+                    <hr class="border border-light border-2 opacity-100 w-75 rounded-5">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control rounded-5 pt-3 pb-3" id="newsletter-name"
+                                name="newsletter-name" placeholder="Nome">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control rounded-5 pt-3 pb-3" id="newsletter-email"
+                                name="newsletter-email" placeholder="Email">
+                        </div>
+                        <div class="mb-3 form-check-reverse">
+                            <input class="form-check-input checkbox-round" type="checkbox" value=""
+                                id="newsletter-check-terms" name="newsletter-check-terms">
+                            <label class="form-check-label text-light text-uppercase me-3" for="newsletter-check-terms">
+                                Concordo com os termos e condições e Política de Privacidade da
+                                Instay
+                            </label>
+                        </div>
+                        <div class="mb-5 form-check form-check-reverse">
+                            <label class="form-check-label text-light text-uppercase me-3" for="newsletter-check-auth">
+                                Autorizo o processamento de dados pessoais de acordo com os requisitos
+                                do
+                                RGPD
+                            </label>
+                            <input class="form-check-input checkbox-round" type="checkbox" value=""
+                                id="newsletter-check-auth" name="newsletter-check-auth">
+                        </div>
+                        <div class="mb-3 d-flex justify-content-end">
+                            <button type="submit" class="btn-subscrever text-uppercase">Subscrever</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                    <div class="mb-3">
+                        <a href="#">TERMOS E CONDIÇÕES</a> |
+                        <a href="#">LIVRO DE RECLAMAÇÕES</a> |
+                        <a href="#">POLÍTICA DE PRIVACIDADE</a>
+                    </div>
+                    <p>Recanto da Ribeira © All Rights reserved | Powered by Intouchbiz</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- v2.0 (BEST) -->
+    <div class="container newsletter rounded-3 mt-5">
+        <!-- TOP SIDE -->
+        <div class="row ">
+            <!-- NAVBAR AND SOCIAL MEDIAS -->
+            <div class="col-md-6">
+                <div class="row">
+                    <!-- NAVBAR -->
+                    <div class="col-12 pt-5 ps-5">
+                        <ul class="nav d-flex flex-column gap-2">
+                            <li class="nav-item">
+                                <a href="#" class="nav-item text-uppercase link-light fs-5 fw-medium">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-item text-uppercase link-light fs-5 fw-medium">Sobre nós</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-item text-uppercase link-light fs-5 fw-medium">Reservar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-item text-uppercase link-light fs-5 fw-medium">Contactos</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- SOCIAL MEDIAS -->
+                    <div class="col-3 d-flex justify-content-between ps-5 pt-5 fs-4">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook me-lg-4 me-5"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- SENTENCE AND FORMS -->
+            <div class="col-md-6 pt-5 pe-md-4 px-5 ps-md-0">
+                <!-- TOP SENTENCE AND HR -->
+                <div class="d-flex flex-column align-items-md-end">
+                    <h3 class="text-md-end text-light">Receba a nossa Newsletter</h3>
+                    <hr class="border border-light border-2 opacity-100 w-75 rounded-5">
+                </div>
+                <!-- FORM -->
+                <form action="#" method="post">
+                    <input type="text" class="form-control rounded-pill py-2 mb-2" name="" id="" placeholder="Nome">
+                    <input type="text" class="form-control rounded-pill py-2 mb-5" name="" id="" placeholder="Nome">
+                    <!-- TERMS -->
+                    <div class="mb-3 form-check-reverse">
+                        <label class="form-check-label text-light text-uppercase me-3" for="newsletter-check-terms">
+                            <small class="checkbox-small">Concordo com os termos e condições e Política de Privacidade
+                                da
+                                Instay</small>
+                        </label>
+                        <input class="form-check-input checkbox-round" type="checkbox" value=""
+                            id="newsletter-check-terms" name="newsletter-check-terms">
+                    </div>
+                    <!-- PERSONAL DATA AUTH -->
+                    <div class="mb-5 form-check-reverse">
+                        <label class="form-check-label text-light text-uppercase me-3" for="newsletter-check-auth">
+                            <small class="checkbox-small">Autorizo o processamento de dados pessoais de acordo com os
+                                requisitos
+                                do
+                                RGPD
+                            </small>
+                        </label>
+                        <input class="form-check-input checkbox-round" type="checkbox" value=""
+                            id="newsletter-check-auth" name="newsletter-check-auth">
+                    </div>
+                    <!-- BUTTON -->
+                    <div class="mb-3 d-flex justify-content-end">
+                        <button type="submit" class="btn-subscrever text-uppercase">Subscrever</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- BOTTOM SIDE -->
+        <div class="row">
+            <div class="col-12 text-center pt-4">
+                <!-- TERMS, AUTH AND RULES NAVBAR -->
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-md-between flex-column flex-md-row px-5 mb-3 fw-medium">
+                        <a href="#">TERMOS E CONDIÇÕES</a>
+                        <a href="#">LIVRO DE RECLAMAÇÕES</a>
+                        <a href="#">POLÍTICA DE PRIVACIDADE</a>
+                    </div>
+                </div>
+                <!-- COMPANY RIGHTS -->
+                <div class="row">
+                    <div class="col-12 py-3">
+                        <p class="text-light letter-spacing">Recanto da Ribeira © All Rights reserved | Powered by
+                            Intouchbiz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

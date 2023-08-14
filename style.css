@@ -1,0 +1,259 @@
+:root {
+  --bg-question-color: #9e7c42;
+  --btn-subscribe-color: #83a126;
+  --btn-subscribe-hover-color: #6c8e1e;
+  --bg-newsletter-color: #828282;
+}
+
+/* GLOBAL ELEMENTS */
+body {
+  font-family: Lato;
+  font-size: 1rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+input::placeholder {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding-left: 3rem;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea::placeholder {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding-left: 3rem;
+  padding-top: 1rem;
+}
+
+/* GLOBAL ITEMS */
+.homepage-body {
+  color: white;
+}
+
+.btn-subscrever {
+  font-weight: 500;
+  background-color: var(--btn-subscribe-color);
+  color: white;
+  text-transform: uppercase;
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+  border: none;
+}
+
+.btn-subscrever:hover {
+  background-color: var(--btn-subscribe-hover-color);
+}
+
+.checkbox-small {
+  font-size: 0.7rem;
+}
+
+.letter-spacing {
+  letter-spacing: 0.15rem;
+}
+
+.checkbox-round {
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  border-radius: 50% !important;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  padding: 0.3rem !important;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background-color: #83a126;
+}
+
+.rounded-top-left {
+  border-top-left-radius: 1rem !important;
+}
+
+.small {
+  font-size: 0.84rem;
+}
+
+/* SECTION COLORS */
+.question {
+  background-color: var(--bg-question-color);
+}
+
+.question-2 {
+  background-color: #955e45;
+}
+
+.newsletter {
+  background-color: var(--bg-newsletter-color);
+}
+
+footer {
+  color: #707070;
+}
+
+/* SPLIDE CAROUSEL */
+.btn-carousel {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  outline: none;
+  background-color: white;
+  color: #777777;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.splide__slide img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  /* object-fit: cover; */
+}
+
+#opac .splide__slide {
+  opacity: 0.6;
+}
+
+#opac > .splide__slide.is-active {
+  opacity: 1;
+}
+
+.btn-next-slider {
+  border: 1px solid #707070;
+  color: white;
+  background-color: #707070;
+}
+
+.btn-prev-slider {
+  border: 1px solid black;
+  color: black;
+  background-color: transparent;
+}
+
+/* NAVBAR-1 */
+
+.bg-dark {
+  background-color: transparent !important;
+}
+
+/* header .nav-item {
+  background-color: #7f7f7f !important;
+} */
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+  border-radius: 0px 0px 100% 100% / 0px 0px 100px 100px;
+  background-color: white;
+}
+
+.bg-dark,
+.navbar-brand {
+  padding-top: 0 !important;
+}
+
+/* NAVBAR-1 TOOGLER CSS */
+.navbar-toggler {
+  background-color: #7f7f7f !important;
+  color: #161616 !important;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+}
+
+#product-page.navbar-toggler {
+  background-color: transparent !important;
+  color: #161616 !important;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 100%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* NAVBAR-2 */
+
+/* HEADER IMAGE */
+.homepage-header {
+  height: 100vh;
+  background-image: url(images/charcuterie-338498_1280.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 100vw #0000007c;
+}
+
+/* OTHERS TO VERIFY */
+.homepage-body {
+  background-color: black;
+}
+
+/* CENTERS THE BOOKMARK ICON */
+#homepage .product-fav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #777777;
+}
+
+/* PRODUCT CARD ROW */
+
+.card-top i {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.bi-bookmark,
+.bi-bookmark-fill {
+  color: white;
+  font-size: 2.5rem;
+}
+
+#homepage .card a {
+  display: flex;
+  flex-direction: column;
+}
+
+#homepage .card-body {
+  background-color: #707070;
+  border-radius: 0 0 6px 6px;
+}
+
+#homepage .card-img-top {
+  width: 100%;
+  height: 20vh;
+  object-fit: contain;
+}
+
+/* MEDIA QUERY */
+@media (min-width: 1900px) {
+  .logo {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 1490px) {
+  .logo {
+    height: 40vh;
+  }
+}

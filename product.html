@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOOTSTRAP CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- BOOTSTRAP ICONS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- SPLIDE CAROUSEL CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JQUERY CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- POPPER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- BOOTSTRAP JS SCRIPT CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- PAGE TITLE -->
+    <title>Evangelista de Oliveira</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="container-fluid px-5 pb-5">
+        <nav class="navbar bg-dark d-flex justify-content-end justify-content-sm-between">
+            <a class="navbar-brand" href="/index.html">
+                <img src="../images/logo_evangelista.jpg" alt="Logotipo da Empresa" class="img-fluid w-100 px-4">
+
+            </a>
+            <button class="navbar-toggler" id="product-page" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu <br> Evangelista de Oliveira</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reservar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contactos</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PRODUCT DISPLAY -->
+    <div class="container mt-5">
+        <div class="row">
+            <!--   PRODUCT IMG CAROUSEL   -->
+            <div class="col-md-6">
+                <div class="row justify-content-center">
+                    <!-- MAIN IMAGE -->
+                    <div class="col-12 d-flex justify-content-center">
+                        <!-- MAIN CAROUSEL THAT DISPLAYS THE CURRENT SELECTED IMAGE -->
+                        <section id="main-carousel" class="splide col-12" aria-label="My Awesome Gallery">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img src="https://source.unsplash.com/random" alt="Image 1"
+                                            class="img-thumbnail">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+                                            alt="Image 2" class="img-thumbnail">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt="Image 3"
+                                            class="img-thumbnail">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg" alt="Image 4"
+                                            class="img-thumbnail">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+                                            alt="Image 5" class="img-thumbnail">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+                                            alt="Image 6" class="img-thumbnail">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- THUMBNAIL IMAGES AND CONTROLLER -->
+                    <div class="col-8 mt-4 d-flex justify-content-center gap-2">
+                        <!-- PREVIOUS BUTTON CONTROL -->
+                        <button aria-label="Previous Button" type="button" id="btnPrev"
+                            class="btn-sm btn-carousel align-self-center"><i class="bi bi-chevron-left"></i></button>
+                        <!-- THUMBNAIL CAROUSEL THAT SELECTS AN IMAGE -->
+                        <section id="thumbnail-carousel" class="splide col-12"
+                            aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+                            <div class="splide__track">
+                                <ul class="splide__list" id="opac">
+                                    <li class="splide__slide">
+                                        <img src="https://source.unsplash.com/random" alt="Image 1"
+                                            class="img-thumbnail">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+                                            alt="Image 2" class="img-thumbnail">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt="Image 3"
+                                            class="img-thumbnail">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg" alt="Image 4"
+                                            class="img-thumbnail">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+                                            alt="Image 5" class="img-thumbnail">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+                                            alt="Image 6" class="img-thumbnail">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <!-- NEXT BUTTON CONTROL -->
+                        <button aria-label="Next Button" type="button" id="btnNext" id="thumbnail-slider"
+                            class="btn-sm btn-carousel align-self-center"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!--   PRODUCT INFO   -->
+            <div class="col-md-6 ps-md-2 mt-5 mt-sm-4 ">
+                <!-- PRODUCT TITLE -->
+                <h3>CHOURIÇO DE CARNE</h3>
+                <!-- PRODUCT INFO -->
+                <div class="row mt-4">
+                    <!-- PRODUCT STATS -->
+                    <div class="col-md-auto d-flex justify-content-between mb-3 mb-lg-0">
+                        <span class="badge bg-success px-3 py-2 me-2">3.8</span>
+                        <span class="text-secondary fw-medium">1324 Classificações</span>
+                    </div>
+                    <div class="col-auto d-none d-lg-flex">
+                        |
+                    </div>
+                    <div class="col-md d-flex justify-content-between">
+                        <span class="fw-bold">SKU: 235252</span>
+                        <span class="text-success fw-medium">Disponível</span>
+                    </div>
+                </div>
+                <hr class="border-2 border-secondary opacity-25 mt-4" />
+                <!-- PRODUCT PRICE -->
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <span class="fw-normal display-5 me-4">299 €</span>
+                        <span class="text-decoration-line-through display-5 text-secondary">399 €</span>
+                    </div>
+                </div>
+                <!-- PRODUCT BUYING OPTIONS -->
+                <div class="row">
+                    <form action="" class="my-4">
+                        <!-- DATE INPUT -->
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-lg-6 mb-3 d-flex">
+                                    <label for="product-date-begin" class="form-label my-auto me-4">Início</label>
+                                    <input class="form-control rounded-pill" type="date" id="product-date-begin"
+                                        name="product-date-begin">
+                                </div>
+                                <div class="col-lg-6 mb-3 d-flex">
+                                    <label for="product-date-end"
+                                        class="form-label my-auto me-4 pe-sm-2 ps-sm-1">Fim</label>
+                                    <input class="form-control rounded-pill" type="date" id="product-date-end"
+                                        name="product-date-end">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- QUANTITY -->
+                        <div class="col-6 mb-3 d-flex">
+                            <label for="product-qnt" class="form-label my-auto me-4 pe-1">QNT</label>
+                            <input class="form-control" type="number" id="product-qnt" name="product-qnt">
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-md-2 col-lg-1 ps-lg-5"></div>
+                            <div class="col-md-4">
+                                <button type="button"
+                                    class="btn btn-success text-uppercase rounded-pill px-4 py-2">Comprar</button>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3 mt-lg-0">
+                            <div class="row small mt-4 ">
+
+                                <div class="col-lg-auto mt-sm-4 mb-3 mb-lg-0">
+                                    <a href="" class="link-dark text-decoration-none text-uppercase"><i
+                                            class="bi bi-envelope-fill me-2"></i><small>Email para amigo</small></a>
+                                </div>
+
+                                <div class="col-lg-auto d-none d-lg-flex mt-sm-4 mb-sm-3 px-0">|</div>
+
+                                <div class="col-lg mt-sm-4 mb-3 mb-lg-0 d-flex justify-content-lg-center">
+                                    <a href="" class="link-dark text-decoration-none text-uppercase text-lg-center"><i
+                                            class="bi bi-heart-fill me-2"></i><small>Adicionar aos favoritos</small></a>
+                                </div>
+
+                                <div class="col-lg-auto d-none d-lg-flex mt-sm-4 mb-sm-3 px-0">|</div>
+
+                                <div class="col-lg mt-sm-4 mb-sm-3">
+                                    <a href="" class="link-dark text-decoration-none text-uppercase"><i
+                                            class="bi bi-arrow-left-right me-2"></i><small>Comparar</small></a>
+                                </div>
+
+                            </div>
+                            <p class="mt-4 mt-lg-5">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                                ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAILS -->
+    <div class="container mt-5">
+        <div class="border rounded-4">
+            <!-- Tabs -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active link-dark fw-medium p-3 rounded-top-left" data-toggle="tab"
+                        href="#descricao">Descrições</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-dark fw-medium p-3" data-toggle="tab"
+                        href="#especificacoes">Especificações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-dark fw-medium p-3" data-toggle="tab" href="#classificacao">Classificação e
+                        Comentários</a>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <div id="descricao" class="tab-pane fade show active pt-4 pb-3">
+                    <div class="container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque minima molestias, quaerat
+                            omnis
+                            impedit quis perferendis nostrum dolorum, porro doloribus assumenda voluptatibus? Vitae
+                            nostrum
+                            debitis ipsum eligendi cupiditate tempora consectetur!
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque minima molestias, quaerat
+                            omnis
+                            impedit quis perferendis nostrum dolorum, porro doloribus assumenda voluptatibus? Vitae
+                            nostrum
+                            debitis ipsum eligendi cupiditate tempora consectetur!
+                        </p>
+                    </div>
+                    <div class="container pt-5">
+
+                        <div class="row mb-2">
+                            <div class="col-md-4 col-12">Código Produto</div>
+                            <div class="col-md-8 col-12 fw-medium">CDP-123456</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4 col-12">Localização</div>
+                            <div class="col-md-8 col-12 fw-medium">Algarve</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4 col-12">Duração</div>
+                            <div class="col-md-8 col-12 fw-medium">2 dias</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4 col-12">Dificuldade</div>
+                            <div class="col-md-8 col-12 fw-medium">Mediana</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4 col-12">Extras</div>
+                            <div class="col-md-8 col-12 fw-medium">Extra 1, Extra 2, Extra 3</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4 col-12">Pacote de</div>
+                            <div class="col-md-8 col-12 fw-medium">1</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4 col-12">Pacote de Vendas</div>
+                            <div class="col-md-8 col-12 fw-medium">Lazer, Aquático, Diversão</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4 col-12">Outros detalhes</div>
+                            <div class="col-md-8 col-12 fw-medium">Aqui aparecerá as observações ou os outros campos
+                                previamente preenchidos no BackOffice em relação a este produto.</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="especificacoes" class="tab-pane fade mt-4 pb-3">
+                    <div class="container">
+                        <h4>Especificações</h4>
+                        <p>Aqui estão as especificações detalhadas do produto.</p>
+                    </div>
+                </div>
+                <div id="classificacao" class="tab-pane fade mt-4 pb-3">
+                    <div class="container">
+                        <h4>Classificação e Comentários</h4>
+                        <p>Os clientes podem deixar classificações e comentários nesta aba.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RELATED PRODUCTS -->
+    <div class="container">
+        <div class="row">
+            <!-- HEADER AND CAROUSEL CONTROLLER -->
+            <div class="highlight-header d-flex mt-5 mb-3">
+                <div class="col-6 ps-0">
+                    <h3 class="highlight-title">Produtos Relacionados</h3>
+                </div>
+
+
+                <div class="col-6 d-flex justify-content-end align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn-prev-slider rounded-start-3" id="prevHighlights"
+                            aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+                        <button type="button" class="btn-next-slider rounded-end-3" id="nextHighlights"
+                            aria-label="Right Button"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- HIGHLIGHTS CAROUSEL -->
+            <section class="splide" id="highlight" aria-label="Basic Structure Example">
+                <div class="splide__track">
+                    <ul class="splide__list" id="related-prod">
+                        <li class="splide__slide">
+                            <div class="card border-0">
+                                <div class="card-top d-flex
+                                justify-content-end mb-1">
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i
+                                            class="bi bi-arrow-left-right me-2"></i></span>
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i id="1"
+                                            class="bi bi-suit-heart"></i></span>
+                                </div>
+                                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="Image 1"
+                                    class="img-fluid card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center text-secondary fw-normal">Nome da Experiência</h5>
+                                    <p class="card-text text-center text-secondary fw-bold fs-4">199 €</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card border-0">
+                                <div class="card-top d-flex
+                    justify-content-end mb-1">
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i
+                                            class="bi bi-arrow-left-right me-2"></i></span>
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i id="2"
+                                            class="bi bi-suit-heart"></i></span>
+                                </div>
+                                <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+                                    alt="Image 2" class="img-fluid card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center text-secondary fw-normal">Nome da Experiência</h5>
+                                    <p class="card-text text-center text-secondary fw-bold fs-4">299 €</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card border-0">
+                                <div class="card-top d-flex
+                    justify-content-end mb-1">
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i
+                                            class="bi bi-arrow-left-right me-2"></i></span>
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i id="3"
+                                            class="bi bi-suit-heart"></i></span>
+                                </div>
+                                <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt="Image 3"
+                                    class="img-fluid card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center text-secondary fw-normal">Nome da Experiência</h5>
+                                    <p class="card-text text-center text-secondary fw-bold fs-4">399 €</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card border-0">
+                                <div class="card-top d-flex
+                    justify-content-end mb-1">
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i
+                                            class="bi bi-arrow-left-right me-2"></i></span>
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i id="4"
+                                            class="bi bi-suit-heart"></i></span>
+                                </div>
+                                <img src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg" alt="Image 4"
+                                    class="img-fluid card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center text-secondary fw-normal">Nome da Experiência</h5>
+                                    <p class="card-text text-center text-secondary fw-bold fs-4">499 €</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card border-0">
+                                <div class="card-top d-flex
+                    justify-content-end mb-1">
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i
+                                            class="bi bi-arrow-left-right me-2"></i></span>
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i id="5"
+                                            class="bi bi-suit-heart"></i></span>
+                                </div>
+                                <img src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+                                    alt="Image 5" class="img-fluid card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center text-secondary fw-normal">Nome da Experiência</h5>
+                                    <p class="card-text text-center text-secondary fw-bold fs-4">599 €</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card border-0">
+                                <div class="card-top d-flex
+                    justify-content-end mb-1">
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i
+                                            class="bi bi-arrow-left-right me-2"></i></span>
+                                    <span class="mt-3 me-3 align-self-center product-fav"><i id="6"
+                                            class="bi bi-suit-heart"></i></span>
+                                </div>
+                                <img src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+                                    alt="Image 6" class="img-fluid card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center text-secondary fw-normal">Nome da Experiência</h5>
+                                    <p class="card-text text-center text-secondary fw-bold fs-4">699 €</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- QUESTION SECTION -->
+    <div class="container mt-5">
+        <div class="row  h-100 question-2 rounded-4">
+            <!--  LEFT SIDE   -->
+            <div class="col-md-6">
+                <!-- SENTENCES AND IMAGE -->
+                <div class="row h-100">
+                    <!-- TOP SENTENCES -->
+                    <h3 class="display-5 text-uppercase text-light fw-medium pt-5 ps-5">Alguma Questão?</h3>
+                    <h3 class="display-5 text-uppercase text-light fw-medium ps-5">Fale Connosco!</h3>
+                    <!-- LEFT BOTTOM IMAGE -->
+                    <div class="col-md-12 ps-0 mt-3 mb-0 d-flex align-items-end">
+                        <img src="images/linguica.jpg" class="img-fluid rounded-bottom-4 rounded-md"
+                            alt="Imagem Responsiva">
+                    </div>
+                </div>
+            </div>
+
+            <!--  FORM   -->
+            <div class="col-md-6 d-flex flex-column justify-content-center p-5">
+                <form action="#" method="post" class="d-flex flex-column gap-2 gap-lg-3">
+                    <!-- NAME INPUT -->
+                    <input type="name" class="form-control rounded-pill py-3" placeholder="NOME">
+                    <!-- EMAIL INPUT -->
+                    <input type="email" class="form-control rounded-pill py-3" placeholder="EMAIL">
+                    <!-- CONTACT INPUT -->
+                    <input type="tel" class="form-control rounded-pill py-3" placeholder="CONTACTO">
+                    <!-- MESSAGE TEXTAREA -->
+                    <textarea aria-label="message" name="message" rows="10" class="rounded-2"></textarea>
+                    <!-- SUBMIT BUTTON -->
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn-subscrever rounded-pill text-uppercase">Subscrever</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEWSLETTER SECTION -->
+    <div class="container newsletter rounded-3 mt-5">
+        <!-- TOP SIDE -->
+        <div class="row ">
+            <!-- NAVBAR AND SOCIAL MEDIAS -->
+            <div class="col-md-6">
+                <div class="row">
+                    <!-- NAVBAR -->
+                    <div class="col-12 pt-5 ps-5">
+                        <ul class="nav d-flex flex-column gap-2">
+                            <li class="nav-item">
+                                <a href="/index.html" class="nav-item text-uppercase link-light fs-5 fw-medium">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-item text-uppercase link-light fs-5 fw-medium">Sobre nós</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-item text-uppercase link-light fs-5 fw-medium">Reservar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-item text-uppercase link-light fs-5 fw-medium">Contactos</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- SOCIAL MEDIAS -->
+                    <div class="col-3 d-flex justify-content-between ps-5 pt-5 fs-4">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook me-lg-4 me-5"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- SENTENCE AND FORMS -->
+            <div class="col-md-6 pt-5 pe-md-4 px-5 ps-md-0">
+                <!-- TOP SENTENCE AND HR -->
+                <div class="d-flex flex-column align-items-md-end">
+                    <h3 class="text-md-end text-light">Receba a nossa Newsletter</h3>
+                    <hr class="border border-light border-2 opacity-100 w-75 rounded-5">
+                </div>
+                <!-- FORM -->
+                <form action="#" method="post">
+                    <input type="text" class="form-control rounded-pill py-2 mb-2" name="" id="" placeholder="Nome">
+                    <input type="text" class="form-control rounded-pill py-2 mb-5" name="" id="" placeholder="Email">
+                    <!-- TERMS -->
+                    <div class="mb-3 form-check-reverse">
+                        <label class="form-check-label text-light text-uppercase me-3" for="newsletter-check-terms">
+                            <small class="checkbox-small">Concordo com os termos e condições e Política de Privacidade
+                                da
+                                Instay</small>
+                        </label>
+                        <input class="form-check-input checkbox-round" type="checkbox" value=""
+                            id="newsletter-check-terms" name="newsletter-check-terms">
+                    </div>
+                    <!-- PERSONAL DATA AUTH -->
+                    <div class="mb-5 form-check-reverse">
+                        <label class="form-check-label text-light text-uppercase me-3" for="newsletter-check-auth">
+                            <small class="checkbox-small">Autorizo o processamento de dados pessoais de acordo com os
+                                requisitos
+                                do
+                                RGPD
+                            </small>
+                        </label>
+                        <input class="form-check-input checkbox-round" type="checkbox" value=""
+                            id="newsletter-check-auth" name="newsletter-check-auth">
+                    </div>
+                    <!-- BUTTON -->
+                    <div class="mb-3 d-flex justify-content-end">
+                        <button type="submit" class="btn-subscrever text-uppercase">Subscrever</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- BOTTOM SIDE -->
+        <div class="row">
+            <div class="col-12 text-center pt-4">
+                <!-- TERMS, AUTH AND RULES NAVBAR -->
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-md-between flex-column flex-md-row px-5 mb-3 fw-medium">
+                        <a href="#" class="link-light">TERMOS E CONDIÇÕES</a>
+                        <a href="#" class="link-light">LIVRO DE RECLAMAÇÕES</a>
+                        <a href="#" class="link-light">POLÍTICA DE PRIVACIDADE</a>
+                    </div>
+                </div>
+                <!-- COMPANY RIGHTS -->
+                <div class="row">
+                    <div class="col-12 py-3">
+                        <p class="text-light letter-spacing">Recanto da Ribeira © All Rights reserved | Powered by
+                            Intouchbiz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <p class="mb-0 text-uppercase text-center mt-4">Powered By</p>
+                <img src="images/inteouchbiz.jpg" alt="INTOUCHBIZ" class="img-fluid mb-4 mx-auto d-block">
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script src="js/jquery.js"></script>
+
+</body>
+
+</html>
